@@ -57,7 +57,7 @@ const Hero = () => {
       <S.Title ref={title}>Making a difference.</S.Title>
       <S.Paragraph ref={paragraph1}>
         I'm <span>Zevs</span> (pronounced Zeus), a front-end developer and
-        content creator who is apssionate about cyber security and privacy.
+        content creator who is passionate about cyber security and privacy.
       </S.Paragraph>
       <S.Paragraph ref={paragraph2}>
         Want to have a chat?{' '}
