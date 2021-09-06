@@ -6,6 +6,7 @@ import SocialLinks from '@components/SocialLinks';
 import * as S from './Hero.styles';
 
 const Hero = () => {
+  const overlay = useRef();
   const title = useRef();
   const paragraph1 = useRef();
   const paragraph2 = useRef();
@@ -14,6 +15,10 @@ const Hero = () => {
 
   useEffect(() => {
     tl.current = gsap.timeline();
+
+    tl.current.set(overlay.current, {
+      display: 'none',
+    });
 
     tl.current.from(title.current, 0.4, {
       opacity: 0,
@@ -53,22 +58,26 @@ const Hero = () => {
   }, []);
 
   return (
-    <S.Container>
-      <S.Title ref={title}>Making a difference.</S.Title>
-      <S.Paragraph ref={paragraph1}>
-        I'm <span>Zevs</span> (pronounced Zeus), a front-end developer and
-        content creator who is passionate about cyber security and privacy.
-      </S.Paragraph>
-      <S.Paragraph ref={paragraph2}>
-        Want to have a chat?{' '}
-        <S.LinkGradient href="mailto:zevs@tutamail.com">
-          Send me an email
-        </S.LinkGradient>
-        .
-      </S.Paragraph>
+    <>
+      <S.Overlay ref={overlay} />
 
-      <SocialLinks ref={socialLinks} />
-    </S.Container>
+      <S.Container>
+        <S.Title ref={title}>Making a difference.</S.Title>
+        <S.Paragraph ref={paragraph1}>
+          I'm <span>Zevs</span> (pronounced Zeus), a front-end developer and
+          content creator who is passionate about cyber security and privacy.
+        </S.Paragraph>
+        <S.Paragraph ref={paragraph2}>
+          Want to have a chat?{' '}
+          <S.LinkGradient href="mailto:zevs@tutamail.com">
+            Send me an email
+          </S.LinkGradient>
+          .
+        </S.Paragraph>
+
+        <SocialLinks ref={socialLinks} />
+      </S.Container>
+    </>
   );
 };
 

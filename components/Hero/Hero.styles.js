@@ -55,3 +55,13 @@ export const LinkGradient = styled.a`
     transform-origin: left;
   }
 `;
+
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: ${({ theme }) => theme.colors.background};
+  z-index: 999;
+`;
