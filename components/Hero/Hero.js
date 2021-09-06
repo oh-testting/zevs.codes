@@ -1,4 +1,4 @@
-import { IoLogoInstagram, IoLogoTwitter, IoLogoGithub } from 'react-icons/io5';
+import SocialLinks from '@components/SocialLinks';
 
 import * as S from './Hero.styles';
 
@@ -17,17 +17,8 @@ const Hero = () => {
         </S.LinkGradient>
         .
       </S.Paragraph>
-      <S.SocialContainer>
-        <S.SocialIcon href="#">
-          <IoLogoInstagram />
-        </S.SocialIcon>
-        <S.SocialIcon href="#">
-          <IoLogoTwitter />
-        </S.SocialIcon>
-        <S.SocialIcon href="#">
-          <IoLogoGithub />
-        </S.SocialIcon>
-      </S.SocialContainer>
+
+      <SocialLinks />
     </S.Container>
   );
 };
