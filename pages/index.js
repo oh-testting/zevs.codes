@@ -1,8 +1,12 @@
+import Hero from '@components/Hero';
+
+import * as S from '@styles/pages/Home.styles';
+
 const Home = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <S.Wrapper>
+      <Hero />
+    </S.Wrapper>
   );
 };
 
