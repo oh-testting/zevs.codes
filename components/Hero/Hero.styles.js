@@ -34,4 +34,24 @@ export const LinkGradient = styled.a`
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   font-weight: 600;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #005bea;
+    background-image: linear-gradient(45deg, #00c6fb, #005bea);
+    transform: scaleX(0);
+    transition: transform 0.4s;
+    transform-origin: right;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 `;
